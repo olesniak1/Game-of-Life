@@ -37,12 +37,12 @@ def neighbours(current_row, current_col, grid):  # zliczanie ilosci zywych komor
     for z in range(-1, 2):
         for c in range(-1, 2):
             if not (z == 0 and c == 0):
-                index_row = (current_row + z)
-                index_col = (current_col + c)
-                if (index_row or index_col) > (ROWS - 1) or (index_row or index_col) < 0:
-                    neighbours_alive += 0
+                index_row = (current_row + z) % ROWS
+                index_col = (current_col + c) % COLS
+                if (index_row or index_col) > ROWS - 1 or (index_row or index_col) < 0:
+                    pass
                 else:
-                    neighbours_alive += grid[(index_row % ROWS)][(index_col % ROWS)]
+                    neighbours_alive += grid[index_row][index_col]
     return neighbours_alive
 
 

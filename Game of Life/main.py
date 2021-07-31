@@ -4,14 +4,14 @@ import random
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
-WIDTH = 20
-HEIGHT = 20
-MARGIN = 2
+WIDTH = 10
+HEIGHT = 10
+MARGIN = 1
 background = (212, 10, 100)
 
 ROWS = 0
-while (ROWS < 15) or (ROWS > 35):
-    ROWS = int(input("Podaj rozmiar okna (15-35): "))
+while (ROWS < 15) or (ROWS > 70):
+    ROWS = int(input("Podaj rozmiar okna (15-70): "))
 else:
     pass
 
